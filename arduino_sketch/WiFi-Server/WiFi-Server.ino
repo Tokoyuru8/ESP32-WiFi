@@ -58,7 +58,7 @@ void HTTPPursuer(String ReceiveMessage) { // リクエストメソッドを解�
   }
   for (i += 1; ReceiveMessage[i] != ' ' && i < ReceiveMessage.length(); i++) { // URIの抽出
     URI += ReceiveMessage[i];
-    if (i == 100) {                                           // URIが長すぎた場合のエラー処理
+    if (i >= 100) {                                           // URIが長すぎた場合のエラー処理
       client.println("HTTP/1.1 414 URI Too Long");
       client.println();
       Serial.println("ERR: Server message:");
