@@ -20,8 +20,4 @@ const IPAddress subnet(255, 255, 255, 0);
 WiFiServer server(80); // httpサーバーなのでポート80番を使います
 WiFiClient client;
 
-void HTTPListen();
-void HTTPPursuer(String);
-void Main(String);
-
 #endif
